@@ -23,15 +23,16 @@ export default function PromoCard() {
       <div className="promo-content">
         <h2>{promo.title}</h2>
         <p>{promo.description}</p>
-        <a href={promo.link} className="promo-button">
-          {promo.buttonText}
-        </a>
+        <div className="promo-links">
+  <a href={promo.link} className="promo-button">
+    {promo.buttonText}
+  </a>
+  <a href={promo.secondaryLinkUrl} className="promo-link">
+    {promo.secondaryLinkText}
+  </a>
+</div>
 
-          <a href={promo.secondaryLinkUrl} className="promo-link">
-            {promo.secondaryLinkText}
-          </a>
       </div>
     </div>
   );
 }
-
